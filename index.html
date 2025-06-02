@@ -10,12 +10,12 @@
       vr-mode-ui="enabled: false"
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
     <a-gltf-model src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@675393ecf892dc748b6923999937d881c3a08f34/Assets/TestC.gltf"
-                  animation-mixer="clip: copyCubeAction"
-                  animation-mixer="clip: farmerMovementPointAction"
-                  animation-mixer="clip: statCubeAction"
-                  position="0 -5 -15"
+                  animation-mixer="rootObject: copyCube"
+                  animation-mixer="rootObject: farmerMovementPoint"
+                  animation-mixer="rootObject: statCube"
+                  position="0 -10 -20"
                   ></a-gltf-model>
-    <a-camera  rotation-reader> </a-camera>
+    <a-camera  rotation-reader position="0 0 0" look-controls="enabled: false"> </a-camera>
     </a-scene>
   </body>
 </html>
