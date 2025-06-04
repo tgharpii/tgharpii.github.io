@@ -6,12 +6,13 @@
     <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     <script>
-            const joinButton = document.querySelector('#joinbutton');
-
-            joinButtonEL.addEventListener('click', function (evt) {
-                window.location.href="https://www.blacksustainability.org/";
-            })
-
+        window.onload = function () {
+            document
+                .querySelector("#joinButton")
+                .addEventListener("click", function () {
+                    window.location.href = "https://www.blacksustainability.org/";
+                });
+        };
     </script>
   </head>
   <body>
