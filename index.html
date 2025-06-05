@@ -1,35 +1,49 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    <script src="<https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js>"></script>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-    <script>        
-            const joinButton = document.getElementByld('#joinButton').addEventListener('click', function() {
-                 window.open('https://www.blacksustainability.org', '_blank');
-                });
-
-    </script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   </head>
+
   <body>
     <a-scene 
-        embedded
-        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
-        ar-mode-ui="enabled: false"
-        vr-mode-ui="enabled: false"
-        color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" device-orientation-permission-ui="enabled: false">
-        <a-assets>
-          <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@1c54d42cbe6cce57ed65ece479d049ed5074f0e3/Assets/TestC.gltf"></a-asset-item>
-          <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@1c54d42cbe6cce57ed65ece479d049ed5074f0e3/Assets/joinButton.gltf"></a-asset-item>
-        </a-assets>
-  
-        <a-camera rotation-reader position="0 0 0" look-controls="enabled: true" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
-        <a-entity>
-          <a-gltf-model rotation="0 0 0 " position="0 -10 -25" scale="1 1 1" src="#avatarModel">
-            <a-gltf-model class="clickable" rotation="0 0 0 " position="-20 5 10" scale="1 1 1" src="#joinButton"></a-gltf-model>
-          </a-gltf-model>
-        </a-entity>
-      </a-scene>
-    </body>
+      vr-mode-ui="enabled: false"
+      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+      
+      <a-assets>
+        <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@1c54d42cbe6cce57ed65ece479d049ed5074f0e3/Assets/TestC.gltf"></a-asset-item>
+        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@1c54d42cbe6cce57ed65ece479d049ed5074f0e3/Assets/joinButton.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-camera rotation-reader position="0 0 0" look-controls raycaster="objects: .clickable" cursor="rayOrigin: mouse;"></a-camera>
+
+      <a-entity>
+        <a-gltf-model 
+          rotation="0 0 0" 
+          position="0 -10 -25" 
+          scale="1 1 1" 
+          src="#avatarModel">
+        </a-gltf-model>
+
+        <a-gltf-model 
+          id="joinButtonEntity"
+          class="clickable"
+          rotation="0 0 0" 
+          position="-20 -5 -20" 
+          scale="1 1 1" 
+          src="#joinButton">
+        </a-gltf-model>
+      </a-entity>
+    </a-scene>
+
+    <script>
+      // Wait for scene to load before attaching listener
+      document.addEventListener('DOMContentLoaded', () => {
+        const joinButtonEntity = document.querySelector('#joinButtonEntity');
+        joinButtonEntity.addEventListener('click', () => {
+            window.open("https://www.google.com", "_blank");
+        });
+      });
+    </script>
+  </body>
 </html>
