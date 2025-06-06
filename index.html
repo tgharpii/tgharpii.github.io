@@ -28,27 +28,30 @@
           id="avatarModelEntity"
           rotation="0 0 0" 
           position="0 -10 -20" 
-          scale="1 1 1" 
+          scale="0 0 0" 
           src="#avatarModel"
-          animation-mixer="clip: CopyCubeStart; loop: false; clampWhenFinished: true; timeScale:1;">
+          animation-mixer="clip: CopyCubeStart; loop: false; clampWhenFinished: true; timeScale:1;"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
         <a-gltf-model
           id="FlowerPetalsEntity"
           rotation="0 0 0"
           position="0 -9.5 -20"
-          scale="1 1 1"
+          scale="0 0 0"
           src="#FlowerPetals"
-          animation-mixer="clip: FlowerSway; loop: repeat; timeScale:0.5;">
+          animation-mixer="clip: FlowerSway; loop: repeat; timeScale:0.5;"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
         <a-gltf-model
           id="FarmerStatEntity"
           rotation="0 0 0"
           position="0 -10 -20"
-          scale="1 1 1"
+          scale="0 0 0"
           src="#FarmerStat"
-          animation-mixer="clip: FarmerStatMove; loop: once; timeScale:0">
+          animation-mixer="clip: FarmerStatMove; loop: once; timeScale:0"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
         <a-gltf-model 
@@ -56,8 +59,9 @@
           class="clickable"
           rotation="0 0 0" 
           position="-13.75 -6 -14" 
-          scale="1 1 1" 
-          src="#nextButton">
+          scale="0 0 0" 
+          src="#nextButton"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
         <a-gltf-model 
@@ -65,8 +69,9 @@
           class="clickable"
           rotation="0 0 0" 
           position="-19 -9 -14" 
-          scale="1 1 1" 
-          src="#joinButton">
+          scale="0 0 0" 
+          src="#joinButton"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
         <a-gltf-model 
@@ -74,8 +79,9 @@
           class="clickable"
           rotation="0 0 0" 
           position="-34 -9 -14" 
-          scale="1 1 1" 
-          src="#findButton">
+          scale="0 0 0" 
+          src="#findButton"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
       </a-entity>
