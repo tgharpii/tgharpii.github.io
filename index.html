@@ -3,7 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-  </head>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+</head>
 
   <body>
     <a-scene 
@@ -11,39 +12,119 @@
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
       
       <a-assets>
-        <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@1c54d42cbe6cce57ed65ece479d049ed5074f0e3/Assets/TestC.gltf"></a-asset-item>
+        <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@a100f383e1ffefc262d27af530bd1f169847fb7c/Assets/TestD_aniB.gltf"></a-asset-item>
         <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@1c54d42cbe6cce57ed65ece479d049ed5074f0e3/Assets/joinButton.gltf"></a-asset-item>
+        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@b3a2eab4e5d9616c2af46b37c2342b66c685beda/Assets/nextButton.gltf"></a-asset-item>
+        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@1c54d42cbe6cce57ed65ece479d049ed5074f0e3/Assets/findButton.gltf"></a-asset-item>
+        <a-asset-item id="FlowerPetals" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@a100f383e1ffefc262d27af530bd1f169847fb7c/Assets/FlowerPetals_ani.gltf"></a-asset-item>
+        <a-asset-item id="FarmerStat" src="https://cdn.jsdelivr.net/gh/tgharpii/bsnDemo@252c30233eebbf8cceafc80c8deee6c066bc083f/Assets/FarmerStat_ani.gltf"></a-asset-item>
+
       </a-assets>
 
       <a-camera rotation-reader position="0 0 0" look-controls raycaster="objects: .clickable" cursor="rayOrigin: mouse;"></a-camera>
 
       <a-entity>
         <a-gltf-model 
+          id="avatarModelEntity"
           rotation="0 0 0" 
           position="0 -10 -25" 
           scale="1 1 1" 
-          src="#avatarModel">
+          src="#avatarModel"
+          animation-mixer="clip: CopyCubeStart; loop: false; clampWhenFinished: true; timeScale:1;">
+        </a-gltf-model>
+
+        <a-gltf-model
+          id="FlowerPetalsEntity"
+          rotation="0 0 0"
+          position="0 -9.5 -25"
+          scale="1 1 1"
+          src="#FlowerPetals"
+          animation-mixer="clip: FlowerSway; loop: repeat; timeScale:0.5;">
+        </a-gltf-model>
+
+        <a-gltf-model
+          id="FarmerStatEntity"
+          rotation="0 0 0"
+          position="0 -10 -25"
+          scale="1 1 1"
+          src="#FarmerStat"
+          animation-mixer="clip: FarmerStatMove; loop: once; timeScale:0">
+        </a-gltf-model>
+
+        <a-gltf-model 
+          id="NextButtonEntity"
+          class="clickable"
+          rotation="0 0 0" 
+          position="-13.75 -7 -19" 
+          scale="1 1 1" 
+          src="#nextButton">
         </a-gltf-model>
 
         <a-gltf-model 
           id="joinButtonEntity"
           class="clickable"
           rotation="0 0 0" 
-          position="-20 -5 -20" 
+          position="-19 -9 -19" 
           scale="1 1 1" 
           src="#joinButton">
         </a-gltf-model>
+
+        <a-gltf-model 
+          id="FindButtonEntity"
+          class="clickable"
+          rotation="0 0 0" 
+          position="-34 -9 -19" 
+          scale="1 1 1" 
+          src="#findButton">
+        </a-gltf-model>
+
       </a-entity>
     </a-scene>
 
     <script>
       // Wait for scene to load before attaching listener
       document.addEventListener('DOMContentLoaded', () => {
+        const avatarModelEntity = document.querySelector('#avatarModelEntity');  // Reference to the avatar model
         const joinButtonEntity = document.querySelector('#joinButtonEntity');
+        const nextButtonEntity = document.querySelector('#NextButtonEntity');
+        const FindButtonEntity = document.querySelector('#FindButtonEntity');
+        const FarmerStatEntity = document.querySelector('#FarmerStatEntity');
+
+        const animations = ['CopyCubeStart', 'CopyCubeFrame2', 'CopyCubeFrame3', 'CopyCubeRepeat'];
+        let currentClipIndex = 0;
+
+        avatarModelEntity.setAttribute('animation-mixer', `clip: ${animations[currentClipIndex]}; loop: once; timeScale: 1; clampWhenFinished: true;`);
+
+        nextButtonEntity.addEventListener('click', () => {
+          // Move to the next animation
+          currentClipIndex = (currentClipIndex + 1) % animations.length;
+          const currentClip = animations[currentClipIndex];
+
+          // Set the new animation-mixer with clampWhenFinished: true
+          avatarModelEntity.setAttribute('animation-mixer', `clip: ${currentClip}; loop: once; clampWhenFinished: True; timeScale: 1;`);
+          
+        if (currentClipIndex === 1) {
+            FarmerStatEntity.setAttribute('animation-mixer', 'clip: FarmerStatMove; timeScale: 1; loop: once; clampWhenFinished: True;');
+        } else if (currentClipIndex === 2) {
+            FarmerStatEntity.setAttribute('animation-mixer', 'clip: FarmerStatRev; timeScale: 1; loop: once; clampWhenFinished: True;');
+        } else {
+            // Stop the animation by setting timeScale to 0 (paused)
+            FarmerStatEntity.setAttribute('animation-mixer', 'clip: FarmerStatMove; timeScale: 0; loop: once;');
+    }
+
+        });
+
+        
         joinButtonEntity.addEventListener('click', () => {
-            window.open("https://www.google.com", "_blank");
+            window.open("https://https://www.blacksustainability.org/join-our-network", "_blank");
+        });
+
+        FindButtonEntity.addEventListener('click', () => {
+            window.open("https://maps.blacksustainability.org/", "_blank");
         });
       });
+
+
     </script>
   </body>
 </html>
