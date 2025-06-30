@@ -12,12 +12,11 @@
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
       
       <a-assets>
-        <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@74a57fc6518d68aea7f9bf9eddb57923df9db306/land/Assets/TestD_aniB.gltf"></a-asset-item>
-        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@74a57fc6518d68aea7f9bf9eddb57923df9db306/land/Assets/joinButton.gltf"></a-asset-item>
-        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@74a57fc6518d68aea7f9bf9eddb57923df9db306/land/Assets/nextButton.gltf"></a-asset-item>
-        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@74a57fc6518d68aea7f9bf9eddb57923df9db306/land/Assets/findButton.gltf"></a-asset-item>
-        <a-asset-item id="FlowerPetals" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@74a57fc6518d68aea7f9bf9eddb57923df9db306/land/Assets/FlowerPetals_ani.gltf"></a-asset-item>
-        <a-asset-item id="FarmerStat" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@74a57fc6518d68aea7f9bf9eddb57923df9db306/land/Assets/FarmerStat_ani.gltf"></a-asset-item>
+        <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@a48ed4e6756cd6fb48cf7de788826de20d7c58d4/land/Assets/BSN_Land_Main.gltf"></a-asset-item>
+        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@a48ed4e6756cd6fb48cf7de788826de20d7c58d4/land/Assets/joinButton.gltf"></a-asset-item>
+        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@a48ed4e6756cd6fb48cf7de788826de20d7c58d4/land/Assets/nextButton.gltf"></a-asset-item>
+        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@a48ed4e6756cd6fb48cf7de788826de20d7c58d4/land/Assets/findButton.gltf"></a-asset-item>
+        <a-asset-item id="FarmerStat" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@a48ed4e6756cd6fb48cf7de788826de20d7c58d4/land/Assets/FarmerStat_ani.gltf"></a-asset-item>
 
       </a-assets>
 
@@ -31,16 +30,6 @@
           scale="0 0 0" 
           src="#avatarModel"
           animation-mixer="clip: CopyCubeStart; loop: false; clampWhenFinished: true; timeScale:1;"
-          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
-        </a-gltf-model>
-
-        <a-gltf-model
-          id="FlowerPetalsEntity"
-          rotation="0 0 0"
-          position="0 -9.5 -20"
-          scale="0 0 0"
-          src="#FlowerPetals"
-          animation-mixer="clip: FlowerSway; loop: repeat; timeScale:0.5;"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
