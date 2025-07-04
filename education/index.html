@@ -12,12 +12,16 @@
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
       
       <a-assets>
-        <a-asset-item id="main" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/BSN_Education_Ani_Elder.gltf"></a-asset-item>
-        <a-asset-item id="books" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/BSN_Education_Ani_Books.gltf"></a-asset-item>
-        <a-asset-item id="CopyCube" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/BSN_Education_Ani_CopyCube.gltf"></a-asset-item>
-        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/joinButton.gltf"></a-asset-item>
-        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/nextButton.gltf"></a-asset-item>
-        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/findButton.gltf"></a-asset-item>
+        <a-asset-item id="main" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@9a11845c55851616dcbe176f62455b568b739467/education/Assets/BSN_Education_Ani_Elder.gltf"></a-asset-item>
+        <a-asset-item id="bookA" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@9a11845c55851616dcbe176f62455b568b739467/education/Assets/BSN_Education_Ani_BookA.gltf"></a-asset-item>
+        <a-asset-item id="bookB" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@9a11845c55851616dcbe176f62455b568b739467/education/Assets/BSN_Education_Ani_BookB.gltf"></a-asset-item>
+        <a-asset-item id="bookC" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@9a11845c55851616dcbe176f62455b568b739467/education/Assets/BSN_Education_Ani_BookC.gltf"></a-asset-item>
+        <a-asset-item id="bookD" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@9a11845c55851616dcbe176f62455b568b739467/education/Assets/BSN_Education_Ani_BookD.gltf"></a-asset-item>
+        <a-asset-item id="bookE" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@9a11845c55851616dcbe176f62455b568b739467/education/Assets/BSN_Education_Ani_BookE.gltf"></a-asset-item>
+        <a-asset-item id="CopyCube" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@9a11845c55851616dcbe176f62455b568b739467/education/Assets/BSN_Education_Ani_CopyCube.gltf"></a-asset-item>
+        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@9a11845c55851616dcbe176f62455b568b739467/education/Assets/joinButton.gltf"></a-asset-item>
+        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@9a11845c55851616dcbe176f62455b568b739467/education/Assets/nextButton.gltf"></a-asset-item>
+        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@9a11845c55851616dcbe176f62455b568b739467/education/Assets/findButton.gltf"></a-asset-item>
 
       </a-assets>
 
@@ -35,11 +39,47 @@
         </a-gltf-model>
 
         <a-gltf-model 
-          id="bookEntity"
+          id="bookAEntity"
           rotation="0 0 0" 
           position="0 -9 -20" 
           scale="0 0 0" 
-          src="#books"
+          src="#bookA"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
+        </a-gltf-model>
+
+        <a-gltf-model 
+          id="bookBEntity"
+          rotation="0 0 0" 
+          position="0 -9 -20" 
+          scale="0 0 0" 
+          src="#bookB"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
+        </a-gltf-model>
+
+        <a-gltf-model 
+          id="bookCEntity"
+          rotation="0 0 0" 
+          position="0 -9 -20" 
+          scale="0 0 0" 
+          src="#bookC"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
+        </a-gltf-model>
+
+        <a-gltf-model 
+          id="bookDEntity"
+          rotation="0 0 0" 
+          position="0 -9 -20" 
+          scale="0 0 0" 
+          src="#bookD"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
+        </a-gltf-model>
+
+        <a-gltf-model 
+          id="bookEEntity"
+          rotation="0 0 0" 
+          position="0 -9 -20" 
+          scale="0 0 0" 
+          src="#bookE"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
