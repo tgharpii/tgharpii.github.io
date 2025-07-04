@@ -12,11 +12,12 @@
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
       
       <a-assets>
-        <a-asset-item id="main" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@271fbc7d8aeff19b7079452c75c29acb89637e01/education/Assets/BSN_Education_Ani_Elder.gltf"></a-asset-item>
-        <a-asset-item id="CopyCube" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@271fbc7d8aeff19b7079452c75c29acb89637e01/education/Assets/BSN_Education_Ani_CopyCube.gltf"></a-asset-item>
-        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@271fbc7d8aeff19b7079452c75c29acb89637e01/education/Assets/joinButton.gltf"></a-asset-item>
-        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@271fbc7d8aeff19b7079452c75c29acb89637e01/education/Assets/nextButton.gltf"></a-asset-item>
-        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@271fbc7d8aeff19b7079452c75c29acb89637e01/education/Assets/findButton.gltf"></a-asset-item>
+        <a-asset-item id="main" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/BSN_Education_Ani_Elder.gltf"></a-asset-item>
+        <a-asset-item id="books" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/BSN_Education_Ani_Books.gltf"></a-asset-item>
+        <a-asset-item id="CopyCube" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/BSN_Education_Ani_CopyCube.gltf"></a-asset-item>
+        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/joinButton.gltf"></a-asset-item>
+        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/nextButton.gltf"></a-asset-item>
+        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d34225a18e4ca19e1c50e010035c8fda3c8cfbd8/education/Assets/findButton.gltf"></a-asset-item>
 
       </a-assets>
 
@@ -30,6 +31,15 @@
           scale="0 0 0" 
           src="#main"
           animation-mixer="clip: ElderFloat; loop: true; true; timeScale:0.5;"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
+        </a-gltf-model>
+
+        <a-gltf-model 
+          id="bookEntity"
+          rotation="0 0 0" 
+          position="0 -9 -20" 
+          scale="0 0 0" 
+          src="#books"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
