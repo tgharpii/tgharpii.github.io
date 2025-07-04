@@ -12,12 +12,16 @@
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
       
       <a-assets>
-        <a-asset-item id="main" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@7a08ad34b6c8e7533c3b147bbb888996eca02db1/water/Assets/BSN_Water_Main.gltf"></a-asset-item>
-        <a-asset-item id="CopyCube" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@7a08ad34b6c8e7533c3b147bbb888996eca02db1/water/Assets/BSN_Water_CopyCube.gltf"></a-asset-item>
-        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@7a08ad34b6c8e7533c3b147bbb888996eca02db1/water/Assets/joinButton.gltf"></a-asset-item>
-        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@7a08ad34b6c8e7533c3b147bbb888996eca02db1/water/Assets/nextButton.gltf"></a-asset-item>
-        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@7a08ad34b6c8e7533c3b147bbb888996eca02db1/water/Assets/findButton.gltf"></a-asset-item>
-        <a-asset-item id="WaterBarrel" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@7a08ad34b6c8e7533c3b147bbb888996eca02db1/water/Assets/BSN_Water_WaterBarrel.gltf"></a-asset-item>
+        <a-asset-item id="main" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@ea6150542c7a4b3352229f160fb66add6274bbe2/water/Assets/BSN_Water_Main.gltf"></a-asset-item>
+        <a-asset-item id="CopyCube" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@ea6150542c7a4b3352229f160fb66add6274bbe2/water/Assets/BSN_Water_CopyCube.gltf"></a-asset-item>
+        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@ea6150542c7a4b3352229f160fb66add6274bbe2/water/Assets/joinButton.gltf"></a-asset-item>
+        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@ea6150542c7a4b3352229f160fb66add6274bbe2/water/Assets/nextButton.gltf"></a-asset-item>
+        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@ea6150542c7a4b3352229f160fb66add6274bbe2/water/Assets/findButton.gltf"></a-asset-item>
+        <a-asset-item id="WaterBarrel" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@ea6150542c7a4b3352229f160fb66add6274bbe2/water/Assets/BSN_Water_WaterBarrel.gltf"></a-asset-item>
+        <a-asset-item id="cloud" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@ea6150542c7a4b3352229f160fb66add6274bbe2/water/Assets/BSN_Water_Main_Cloud.gltf"></a-asset-item>
+        <a-asset-item id="bushA" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@ea6150542c7a4b3352229f160fb66add6274bbe2/water/Assets/BSN_Water_MainBush1.gltf"></a-asset-item>
+        <a-asset-item id="bushB" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@ea6150542c7a4b3352229f160fb66add6274bbe2/water/Assets/BSN_Water_MainBush2.gltf"></a-asset-item>
+
 
       </a-assets>
 
@@ -31,6 +35,34 @@
           scale="0 0 0" 
           src="#main"
           animation-mixer="clip: FarmerMove; loop: true; true; timeScale:1;"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
+        </a-gltf-model>
+
+        <a-gltf-model 
+          id="cloudEntity"
+          rotation="0 0 0" 
+          position="0 -13 -35" 
+          scale="0 0 0" 
+          src="#cloud"
+          animation-mixer="clip: Animation; loop: true; true; timeScale:1;"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
+        </a-gltf-model>
+
+        <a-gltf-model 
+          id="bushAEntity"
+          rotation="0 0 0" 
+          position="0 -13 -35" 
+          scale="0 0 0" 
+          src="#bushA"
+          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
+        </a-gltf-model>
+
+        <a-gltf-model 
+          id="bushBEntity"
+          rotation="0 0 0" 
+          position="0 -13 -35" 
+          scale="0 0 0" 
+          src="#bushB"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
