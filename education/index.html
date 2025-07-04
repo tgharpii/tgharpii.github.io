@@ -13,12 +13,12 @@
       
       <a-assets>
         <a-asset-item id="main" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/BSN_Education_Ani_Elder.gltf"></a-asset-item>
+        <a-asset-item id="CopyCube" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/BSN_Education_Ani_CopyCube.gltf"></a-asset-item>
         <a-asset-item id="bookA" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/BSN_Education_Ani_BookA.gltf"></a-asset-item>
         <a-asset-item id="bookB" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/BSN_Education_Ani_BookB.gltf"></a-asset-item>
         <a-asset-item id="bookC" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/BSN_Education_Ani_BookC.gltf"></a-asset-item>
         <a-asset-item id="bookD" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/BSN_Education_Ani_BookD.gltf"></a-asset-item>
         <a-asset-item id="bookE" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/BSN_Education_Ani_BookE.gltf"></a-asset-item>
-        <a-asset-item id="CopyCube" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/BSN_Education_Ani_CopyCube.gltf"></a-asset-item>
         <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/joinButton.gltf"></a-asset-item>
         <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/nextButton.gltf"></a-asset-item>
         <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@be3ac73481193a1f9655f461819a9a66848b9a98/education/Assets/findButton.gltf"></a-asset-item>
@@ -31,7 +31,7 @@
         <a-gltf-model 
           id="mainEntity"
           rotation="0 0 0" 
-          position="0 -9 -20" 
+          position="0 -9 -24" 
           scale="0 0 0" 
           src="#main"
           animation-mixer="clip: ElderFloat; loop: true; true; timeScale:0.5;"
@@ -41,16 +41,25 @@
         <a-gltf-model 
           id="bookAEntity"
           rotation="0 0 0" 
-          position="0 -9 -20" 
+          position="0 -9 -24" 
           scale="0 0 0" 
           src="#bookA"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
         <a-gltf-model 
+        id="CopyCubeEntity"
+        rotation="0 0 0" 
+        position="0 -9 -24" 
+        scale="0 0 0" 
+        src="#CopyCube"
+        animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
+      </a-gltf-model>
+
+        <a-gltf-model 
           id="bookBEntity"
           rotation="0 0 0" 
-          position="-2 -9 -20" 
+          position="-2 -9 -24" 
           scale="0 0 0" 
           src="#bookB"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
@@ -59,7 +68,7 @@
         <a-gltf-model 
           id="bookCEntity"
           rotation="0 0 0" 
-          position="0 -9 -20" 
+          position="0 -9 -24" 
           scale="0 0 0" 
           src="#bookC"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
@@ -68,7 +77,7 @@
         <a-gltf-model 
           id="bookDEntity"
           rotation="0 0 0" 
-          position="0 -9 -20" 
+          position="0 -9 -24" 
           scale="0 0 0" 
           src="#bookD"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
@@ -77,18 +86,9 @@
         <a-gltf-model 
           id="bookEEntity"
           rotation="0 0 0" 
-          position="0 -9 -20" 
+          position="0 -9 -24" 
           scale="0 0 0" 
           src="#bookE"
-          animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
-        </a-gltf-model>
-
-        <a-gltf-model 
-          id="CopyCubeEntity"
-          rotation="0 0 0" 
-          position="0 -9 -20" 
-          scale="0 0 0" 
-          src="#CopyCube"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
         </a-gltf-model>
 
@@ -96,7 +96,7 @@
           id="NextButtonEntity"
           class="clickable"
           rotation="0 0 0" 
-          position="-13.75 -8 -14" 
+          position="-13.75 -8 -18" 
           scale="0 0 0" 
           src="#nextButton"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
@@ -106,7 +106,7 @@
           id="joinButtonEntity"
           class="clickable"
           rotation="0 0 0" 
-          position="-19 -10 -14" 
+          position="-19 -10 -18" 
           scale="0 0 0" 
           src="#joinButton"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
@@ -116,7 +116,7 @@
           id="FindButtonEntity"
           class="clickable"
           rotation="0 0 0" 
-          position="-34 -10 -14" 
+          position="-34 -10 -18" 
           scale="0 0 0" 
           src="#findButton"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
