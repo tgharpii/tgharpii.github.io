@@ -12,11 +12,11 @@
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
       
       <a-assets>
-        <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d1b37242366683d5b62dc49dc3a09dc7dfe0903f/land/Assets/BSN_Land_Main.gltf"></a-asset-item>
-        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d1b37242366683d5b62dc49dc3a09dc7dfe0903f/land/Assets/joinButton.gltf"></a-asset-item>
-        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d1b37242366683d5b62dc49dc3a09dc7dfe0903f/land/Assets/nextButton.gltf"></a-asset-item>
-        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d1b37242366683d5b62dc49dc3a09dc7dfe0903f/land/Assets/findButton.gltf"></a-asset-item>
-        <a-asset-item id="FarmerStat" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@d1b37242366683d5b62dc49dc3a09dc7dfe0903f/land/Assets/FarmerStat_ani.gltf"></a-asset-item>
+        <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@df6f30dbc9a13c3493028bc24a85784d26a3d6e7/land/Assets/BSN_Land_Main.gltf"></a-asset-item>
+        <a-asset-item id="joinButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@df6f30dbc9a13c3493028bc24a85784d26a3d6e7/land/Assets/joinButton.gltf"></a-asset-item>
+        <a-asset-item id="nextButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@df6f30dbc9a13c3493028bc24a85784d26a3d6e7/land/Assets/nextButton.gltf"></a-asset-item>
+        <a-asset-item id="findButton" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@df6f30dbc9a13c3493028bc24a85784d26a3d6e7/land/Assets/findButton.gltf"></a-asset-item>
+        <a-asset-item id="FarmerStat" src="https://cdn.jsdelivr.net/gh/BlackSustainabilityNetwork/BSN@df6f30dbc9a13c3493028bc24a85784d26a3d6e7/land/Assets/FarmerStat_ani.gltf"></a-asset-item>
 
       </a-assets>
 
@@ -26,7 +26,7 @@
         <a-gltf-model 
           id="avatarModelEntity"
           rotation="0 0 0" 
-          position="0 -10 -27" 
+          position="0 -11 -20" 
           scale="0 0 0" 
           src="#avatarModel"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
@@ -35,7 +35,7 @@
         <a-gltf-model
           id="FarmerStatEntity"
           rotation="0 0 0"
-          position="0 -10 -27"
+          position="0 -11 -20"
           scale="0 0 0"
           src="#FarmerStat"
           animation-mixer="clip: FarmerStatMove; loop: once; timeScale:0"
@@ -46,7 +46,7 @@
           id="NextButtonEntity"
           class="clickable"
           rotation="0 0 0" 
-          position="-13.75 -7 -21" 
+          position="-13.25 -7 -14" 
           scale="0 0 0" 
           src="#nextButton"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
@@ -56,7 +56,7 @@
           id="joinButtonEntity"
           class="clickable"
           rotation="0 0 0" 
-          position="-19 -9 -21" 
+          position="-20 -10 -14" 
           scale="0 0 0" 
           src="#joinButton"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
@@ -66,7 +66,7 @@
           id="FindButtonEntity"
           class="clickable"
           rotation="0 0 0" 
-          position="-34 -9 -21" 
+          position="-44 -10 -14" 
           scale="0 0 0" 
           src="#findButton"
           animation__fadein="property: scale; to: 1 1 1; dur: 1000; easing: easeOutCubic; startEvents: model-loaded">
